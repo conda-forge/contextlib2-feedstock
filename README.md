@@ -3,7 +3,7 @@ About contextlib2
 
 Home: http://contextlib2.readthedocs.org
 
-Package license: PSF
+Package license: PSF 2
 
 Feedstock license: BSD 3-Clause
 
