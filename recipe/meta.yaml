@@ -13,13 +13,13 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  script: python setup.py install
-  number: 0
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
@@ -30,7 +30,7 @@ test:
 
 about:
   home: http://contextlib2.readthedocs.org
-  license: PSF
+  license: PSF 2
   license_family: PSF
   license_file: LICENSE.txt
   summary: 'Backports and enhancements for the contextlib module'
