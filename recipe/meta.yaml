@@ -1,7 +1,7 @@
-{%set name = "contextlib2" %}
+{% set name = "contextlib2" %}
 {% set version = "0.5.5" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "509f9419ee91cdd00ba34443217d5ca51f5a364a404e1dce9e8979cea969ca48" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "509f9419ee91cdd00ba34443217d5ca51f5a364a404e1dce9e8979cea969ca48" %}
 
 package:
   name: {{ name }}
@@ -13,11 +13,12 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  number: 1
+  noarch: python
+  number: 2
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
+  host:
     - python
     - pip
 
